@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GestionSAllesController">
+   <left>
+      <AnchorPane prefHeight="411.0" prefWidth="109.0" style="-fx-background-color: #456798;" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="gestionAffectationbtn" fx:id="gestionAffectationbtn" alignment="CENTER" layoutY="207.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#gestionAffectationbtn" prefHeight="59.0" prefWidth="101.0" style="-fx-background-color: #456798;" text="Gestion Des Affectations" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button id="gestionSallebtn" fx:id="gestionSallebtn" alignment="CENTER" layoutY="147.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#gestionSallebtn" prefHeight="59.0" prefWidth="108.0" style="-fx-background-color: white;" text="Gestion Des Salles" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="89.0" fitWidth="92.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/t2.png" />
+               </image>
+            </ImageView>
+            <Button id="btnGestionDemandes" fx:id="btnGestionDemandes" alignment="CENTER" layoutX="-1.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnGestionDemandes" prefHeight="58.0" prefWidth="104.0" style="-fx-background-color: #456798;" text="Gestion Des Demandes" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="enAttenteLabel" alignment="CENTER" layoutX="79.0" layoutY="315.0" prefHeight="30.0" prefWidth="30.0" textFill="#44a359" textOverrun="CLIP">
+                 <font>
+                     <Font name="Arial Bold Italic" size="15.0" />
+                  </font>
+                     <style>
+                         -fx-background-radius: 25%;
+                             -fx-background-color: #44a359;
+                             -fx-text-fill: white; 
+                           </style>
+                  </Label>
+            <Line endX="56.99998474121094" endY="-0.6666717529296875" layoutX="51.0" layoutY="207.0" startX="-50.999996185302734" startY="-0.6666717529296875" />
+            <Line endX="50.99999237060547" endY="-0.6666717529296875" layoutX="50.0" layoutY="266.0" startX="-50.999996185302734" startY="-0.6666717529296875" />
+            <Line endX="28.999984741210938" endY="-0.66668701171875" layoutX="50.0" layoutY="324.0" startX="-50.999996185302734" startY="-0.6666717529296875" />
+            <Button id="acceuilbtn" fx:id="acceuilbtn" alignment="CENTER" layoutX="-1.0" layoutY="99.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#acceuilbtn" prefHeight="47.0" prefWidth="101.0" style="-fx-background-color: #456798;" text="Acceuil" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="4.0" layoutY="378.0" mnemonicParsing="false" onAction="#deconnexionbtn" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #456798;" text="Deconnexion" underline="true" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="427.0" prefWidth="463.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView id="salleTable" fx:id="salleTable" layoutX="13.0" layoutY="81.0" prefHeight="241.0" prefWidth="429.0">
+              <columns>
+                <TableColumn id="nomCol" fx:id="nomCol" prefWidth="120.0" text="nom" />
+                <TableColumn id="typeCol" fx:id="typeCol" prefWidth="135.0" text="type" />
+                  <TableColumn id="capaciteCol" fx:id="capaciteCol" prefWidth="97.3333740234375" text="capacite" />
+                  <TableColumn id="blocCol" fx:id="blocCol" prefWidth="70.0" text="bloc" />
+
+              </columns>
+            </TableView>
+            <Button fx:id="ajouterSalleButton" layoutX="333.0" layoutY="365.0" mnemonicParsing="false" onAction="#btnAjouterSalle" prefHeight="34.0" prefWidth="113.0" style="-fx-background-color: #6d69ee;" text="+Ajouter Salles" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="24.0" fitWidth="19.0" layoutX="232.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/download.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="390.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/refresh.png" />
+               </image></ImageView>
+            <Label id="nombreLignes" fx:id="nombreLignes" layoutX="13.0" layoutY="373.0" prefHeight="17.0" prefWidth="278.0" />
+            <Label layoutX="13.0" layoutY="40.0" text="GESTION DES SALLES" textFill="#237c1b">
+               <font>
+                  <Font name="Calibri" size="22.0" />
+               </font>
+            </Label>
+            <Button id="supprimerSelectionButton" fx:id="btnSupprimerSalle" layoutX="99.0" layoutY="333.0" mnemonicParsing="false" onAction="#btnSupprimerSalle" style="-fx-background-color: #d94444#ce3030;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Button>
+            <Button id="modifierSelectionButton" fx:id="btnModifierSalle" layoutX="17.0" layoutY="333.0" mnemonicParsing="false" onAction="#btnModifierSalle" style="-fx-background-color: #44a359;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <ComboBox id="Recherche" fx:id="Rechercher" editable="true" layoutX="251.0" layoutY="17.0" prefHeight="25.0" prefWidth="178.0" promptText="Rechercher..." style="-fx-background-color: wihte;" />
+            <Button id="refreshbtn" fx:id="refreshbtn" layoutX="389.0" layoutY="49.0" mnemonicParsing="false" onAction="#refreshbtn" opacity="0.0" prefHeight="25.0" prefWidth="26.0" style="-fx-background-color: black;" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
